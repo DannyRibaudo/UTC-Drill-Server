@@ -1,0 +1,5 @@
+main: co.avvoire.utc.MainPlugin
+name: UTCBattlePlugin
+version: 0.2
+author: Avvoire
+Description: Handles Grenades, Flashbangs, Grappling and sugar.
