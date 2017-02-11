@@ -1,5 +1,6 @@
 package snoop.pi.water;
 
+import org.bukkit.GameMode;
 import org.bukkit.Material;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.PlayerInventory;
@@ -62,6 +63,7 @@ public class Main extends JavaPlugin implements Listener{
 	@EventHandler
 	public void drain(PlayerJoinEvent e){
 		Player p = e.getPlayer();
+		if ((p.getGameMode()==GameMode.CREATIVE)) return;
         BukkitScheduler scheduler = getServer().getScheduler();
         scheduler.scheduleSyncRepeatingTask(this, new Runnable() {
             @Override
