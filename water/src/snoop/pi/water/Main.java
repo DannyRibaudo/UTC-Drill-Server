@@ -43,6 +43,7 @@ public class Main extends JavaPlugin implements Listener{
 		Player p = e.getPlayer();
 		ItemStack item = e.getItem();
 		ItemMeta potion = new Potion(PotionType.WATER).toItemStack(1).getItemMeta();
+		if (!(item.getType()!=Material.POTION)) return;
 		if (!(item.getItemMeta().equals(potion))) return;
 		p.setLevel(20);
 		}
